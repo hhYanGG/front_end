@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>karakara动漫网</title>
+
+<meta name="keywords" content="k站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid">
+
+<style type="text/css">
+
+body{margin: 0px;
+     padding: 0px;
+     font-size: 12px;
+     font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+     background: #FAFAFA none repeat scroll 0% 0%;
+     color: #222;
+     min-width: 990px;
+	 min-height: 1500px;
+    }
+
+.z_top_container {
+    color: #666;
+    position: relative;
+    z-index: 10000;
+}
+
+.z_top li{display:inline;}
+.z_top {height: 36px;
+        background: #FFF none repeat scroll 0% 0%;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        position: relative;
+        z-index: 10000;
+		}
+.z_header{display: block;
+          margin: 0px auto;
+          position: relative;
+          text-align: left;
+          z-index: 10000;
+          width: 980px;
+}
+         }
+.z_top_nav{float: left;
+           height: 30px;
+           margin: 3px 0px;
+           font-size: 12px;
+           }
+.uns_box {
+         float: right;
+         font-size: 12px;
+}
+.m-i{
+      display:inline;
+      padding:25px;
+	  }
+.num{
+     margin-top:100px;
+	 margin-left:175px;
+	 bottom:-20;
+           }
+.search-keyword{
+     margin-top:0px;
+     margin-left:1000px;
+     float:left;
+	 width:200px;
+	 color:#222;
+	 font-size:12px;
+	 overflow:hidden;
+	 height:32px;
+	 padding:0px,12px;
+	 border:0px,none;
+	 box-shadow:none;
+	 background-color:transparent;
+
+}
+.header .num .search #searchform {
+    background-color: rgba(255, 255, 255, 0.88);
+    display: block;
+    height: 32px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease 0s;
+}
+.nem.menu-wrapper{
+ margin-top:500px;
+ }
+ 
+
+.box{
+ width:440px;
+ height:205px;
+ border:solid 1px #CCC;
+ padding:5px;
+}
+.box1{
+ width:610px;
+ height:205px;
+ position:relative;
+ overflow:hidden;
+}
+.picbox{
+ width:610px;
+ height:205px;
+ position:relative;
+ display:none;
+}
+.shadow{
+ width:72%;
+ height:30px;
+ position:absolute;
+ bottom:0px;
+ left:0px;
+ background:#666;
+ opacity:0.5;
+ filter:alpha(opacity=50);
+}
+      .title{
+ width:350px;
+ height:30px;
+ line-height:30px;
+ position:absolute;
+ bottom:0px;
+ left:0px;
+ text-indent:0.5em;
+ color:#FFF;
+}
+.picbtn{
+ width:155px;
+ height:30px;
+ position:absolute;
+ right:170px;
+ bottom:-8px;
+}
+.picbtn a{
+ width:25px;
+ height:12px;
+ display:block;
+ float:left;
+ margin-right:5px;
+ background:url(out.png) no-repeat left top;
+}
+.picbtn a.act{
+ background:url(hover.png) no-repeat left top;
+}
+.box{
+margin-left:190px;
+float:left;
+margin-top:3px;
+	}
+.head tb{
+foat:rigt;
+}
+.b-head-i{
+background: transparent url("icons.png") no-repeat scroll 0% 0%;
+width: 28px;
+height: 28px;
+display: inline-block;
+}
+.b-head-t{
+vertical-align: middle;
+display: inline-block;
+font-size: 18px;
+line-height: 24px;
+color: #222;
+margin: 0px;
+padding: 0px;
+
+}
+.rm-list{
+padding-top: 16px;
+height: 150px;
+margin: 0px;
+padding: 0px;
+list-style-type: none;
+}
+.rm-list li{display:inline;}
+.cotainer-row{
+margin-left:190px;
+}
+.search div{
+widtth:267;
+}
+.b-live{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+.b-section-body{
+width:880px;
+height:360px;
+float:left;
+}
+.live-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;
+}
+.donghua-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;
+}
+.b-donghua{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+.b-fanju{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+.b-music{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+.fanju-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;}
+
+.music-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;}
+
+.dance-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;}
+
+.b-dance{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+.head{
+float:left;
+margin-left:190px;
+}
+.video{
+width:400px;
+height:600px;
+margin-left:190px;
+}
+</style>
+
+<script type="text/javascript">
+    window.onload=function(){
+	
+	var oBtn=document.getElementById("btn");
+	var aBtn=oBtn.getElementsByTagName("a");
+	var oBox=document.getElementById("box");
+	
+	var aPicBox=getByClass("picbox",oBox);
+		
+	for(var i=0;i<aBtn.length;i++){
+	       aBtn[i].index=i;
+	       aBtn[i].onmouseover=function(){
+            for(var j=0;j<aBtn.length;j++){
+			aBtn[j].className="";
+			aPicBox[j].style.display="none";
+			}
+	       this.className="act";
+		   aPicBox[this.index].style.display="block";
+		   
+		 }
+	   }
+	   function getByClass(sName,oParent){
+	     var obj=oParent.getElementsByTagName("*");//得到所有元素  * 为通配符
+		 var result=[];
+		 for(var i=0;i<obj.length;i++){
+		   if(obj[i].className==sName){
+		     result.push(obj[i]);
+		    }
+		 }
+		 return result;//返回值
+		 
+	   }
+	   setInterval(function (){
+	      for (var i=0;i<aBtn.length;i++){
+		       if(aBtn[i].className =="act"&&aPicBox[i].style.display=="block"){
+			       aBtn[i].className="";
+				   aPicBox[i].style.display="none";
+				   if(i==aBtn.length-1){
+				      aBtn[0].className="act";
+					  aPicBox[0].style.display="block";
+				   }
+				   else{
+				       aBtn[i+1].className="act"
+					   aPicBox[i+1].style.display="block";
+				   }
+				   break;
+			   }
+		  }
+	   },1000);
+	}
+
+</script>
+</head>
+<body>
+<div class="z_top_container">
+   <div class="z_top">
+     <div class="z_header">
+	       <div class="z_top_nav">
+		       <ul style="float:left;">
+			      <li class="home"><a class="i_link" href="www.bilibili.com">主站</a></li>
+				  <li class="hbili"><a class="i_link" title="画友" href="http://h.bilibili.com/">画友</a></li>
+				  <li><a class="i_link re"title="游戏中心"href="http://game.bilibili.com/">游戏中心</a></li>
+				  <li><a class="live"title="直播"href="http://live.bilibili.com"target="_blank">直播</a></li>
+				  <li class="no_border"><a class="i_link"title="手机端"href="http://app.bilibili.com"target="_blank">手机端</a></li>
+				  <li class="yoo"><a class="i-link"title="日本游"href="http://yoo.bilibili.com/index.html"target="_blank">日本游</a></li>
+			   </ul>
+		   </div>
+		   
+		   <div class="uns_box">
+		        <ul class="menu">
+				    <li>   <a href="login.html" id="example">登录</a></li>
+				    <li><select><option><a href="message.html">消息</a></option >
+					             <option><a>回复我的</a></option>
+								 <option><a>@我的</a></option>
+								 <option><a>收到的赞</a></option>
+								 <option><a>系统通知</a></option>
+								 <option><a>我的私信</a></option>
+					                                   </select></li>
+					<li><a href="">动态</a></li>
+					<li><a>收藏夹</a></li>
+					<li><a>历史</a></li>
+					<li><a>投稿</a></li>
+					
+				</ul>
+		   </div>
+     </div>
+  </div>
+</div>
+<div class="header"style="background:transparent no-repeat  scroll center top;">
+<a style="position:absolute;width:100%height:300px;top:0;left:0;"target="_blank"href="karakara动漫网.html"><img src="head.jpg"/></a>
+
+</div>
+
+<div class="num">
+   <div class="menu-wrapper"style="float:left;">
+        <ul class="nav-menu">
+		    <li class="m-i home"><a href="http://www.bilibili.com">首页</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">动画</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">番剧</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">音乐</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">舞蹈</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">游戏</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">科技</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">娱乐</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">娱乐</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">鬼畜</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">电视剧</a></li>
+			<li class="m-i"><a href="http://www.bilibili.com">排行</a></li>
+		</ul>
+
+   </div>
+	<div class="search" style="z-index:9999;float:left;">
+		<input class="search-keyword"name="searchform"></input>
+		<input name="orderby" value="" type="hidden">
+		<button type="submit" name="formsubmit" class="search-submit" style="width:40px;height:40px;background: transparent url('icons.png') repeat scroll -653px -720px;"></button>
+	</div>
+</div>
+<div class="head">
+     <h1>标题XXXXXXXXXXXXXXXX</h1>
+</div>
+<div class="video">
+   <video controls="controls">
+       <source src="video.mp4" type="video/mp4">
+   
+   </video>
+
+</div>
+</html>

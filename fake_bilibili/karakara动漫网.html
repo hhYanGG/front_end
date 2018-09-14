@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>karakara动漫网</title>
+
+<meta name="keywords" content="k站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid">
+<link rel="stylesheet" href="css2/main.css" />
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<link rel="Stylesheet" type="text/css" href="style/loginDialog.css" />
+<style type="text/css">
+
+body{margin: 0px;
+     padding: 0px;
+     font-size: 12px;
+     font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+     background: #FAFAFA none repeat scroll 0% 0%;
+     color: #222;
+     min-width: 990px;
+	 min-height: 1500px;
+    }
+
+.z_top_container {
+    color: #666;
+    position: relative;
+    z-index: 10000;
+}
+
+.z_top li{display:inline;}
+.z_top {height: 36px;
+        background: #FFF none repeat scroll 0% 0%;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        position: relative;
+        z-index: 10000;
+		}
+.z_header{display: block;
+          margin: 0px auto;
+          position: relative;
+          text-align: left;
+          z-index: 10000;
+          width: 980px;
+}
+         }
+.z_top_nav{float: left;
+           height: 30px;
+           margin: 3px 0px;
+           font-size: 12px;
+           }
+.uns_box {
+         float: right;
+         font-size: 12px;
+}
+.m-i{
+      display:inline;
+      padding:25px;
+	  }
+.num{
+     margin-top:100px;
+	 margin-left:175px;
+	 bottom:-20;
+           }
+.search-keyword{
+     margin-top:0px;
+     margin-left:1000px;
+     float:left;
+	 width:200px;
+	 color:#222;
+	 font-size:12px;
+	 overflow:hidden;
+	 height:32px;
+	 padding:0px,12px;
+	 border:0px,none;
+	 box-shadow:none;
+	 background-color:transparent;
+
+}
+.header .num .search #searchform {
+    background-color: rgba(255, 255, 255, 0.88);
+    display: block;
+    height: 32px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease 0s;
+}
+.nem.menu-wrapper{
+ margin-top:500px;
+ }
+ 
+
+.box{
+ width:440px;
+ height:205px;
+ border:solid 1px #CCC;
+ padding:5px;
+}
+.box1{
+ width:610px;
+ height:205px;
+ position:relative;
+ overflow:hidden;
+}
+.picbox{
+ width:610px;
+ height:205px;
+ position:relative;
+ display:none;
+}
+.shadow{
+ width:72%;
+ height:30px;
+ position:absolute;
+ bottom:0px;
+ left:0px;
+ background:#666;
+ opacity:0.5;
+ filter:alpha(opacity=50);
+}
+      .title{
+ width:350px;
+ height:30px;
+ line-height:30px;
+ position:absolute;
+ bottom:0px;
+ left:0px;
+ text-indent:0.5em;
+ color:#FFF;
+}
+.picbtn{
+ width:155px;
+ height:30px;
+ position:absolute;
+ right:170px;
+ bottom:-8px;
+}
+.picbtn a{
+ width:25px;
+ height:12px;
+ display:block;
+ float:left;
+ margin-right:5px;
+ background:url(out.png) no-repeat left top;
+}
+.picbtn a.act{
+ background:url(hover.png) no-repeat left top;
+}
+.box{
+margin-left:190px;
+float:left;
+margin-top:3px;
+	}
+.head tb{
+foat:rigt;
+}
+.b-head-i{
+background: transparent url("icons.png") no-repeat scroll 0% 0%;
+width: 28px;
+height: 28px;
+display: inline-block;
+}
+.b-head-t{
+vertical-align: middle;
+display: inline-block;
+font-size: 18px;
+line-height: 24px;
+color: #222;
+margin: 0px;
+padding: 0px;
+
+}
+.rm-list{
+padding-top: 16px;
+height: 150px;
+margin: 0px;
+padding: 0px;
+list-style-type: none;
+}
+.rm-list li{display:inline;}
+.cotainer-row{
+margin-left:190px;
+}
+.search div{
+widtth:267;
+}
+.b-live{
+width:1160px;
+height:405px;
+margin-left:190px;
+margin-top:40px;
+}
+.b-section-body{
+width:880px;
+height:360px;
+float:left;
+}
+.live-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;
+}
+.donghua-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;
+}
+.b-donghua{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+.b-fanju{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+.b-music{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+.fanju-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;}
+
+.music-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;}
+
+.dance-side{
+width:260px;
+height:344px;
+float:left;
+margin-top:70px;}
+
+.b-dance{
+width:1160px;
+height:405px;
+margin-left:190px;
+}
+</style>
+
+<script type="text/javascript">
+    window.onload=function(){
+	
+	var oBtn=document.getElementById("btn");
+	var aBtn=oBtn.getElementsByTagName("a");
+	var oBox=document.getElementById("box");
+	
+	var aPicBox=getByClass("picbox",oBox);
+		
+	for(var i=0;i<aBtn.length;i++){
+	       aBtn[i].index=i;
+	       aBtn[i].onmouseover=function(){
+            for(var j=0;j<aBtn.length;j++){
+			aBtn[j].className="";
+			aPicBox[j].style.display="none";
+			}
+	       this.className="act";
+		   aPicBox[this.index].style.display="block";
+		   
+		 }
+	   }
+	   function getByClass(sName,oParent){
+	     var obj=oParent.getElementsByTagName("*");//得到所有元素  * 为通配符
+		 var result=[];
+		 for(var i=0;i<obj.length;i++){
+		   if(obj[i].className==sName){
+		     result.push(obj[i]);
+		    }
+		 }
+		 return result;//返回值
+		 
+	   }
+	   setInterval(function (){
+	      for (var i=0;i<aBtn.length;i++){
+		       if(aBtn[i].className =="act"&&aPicBox[i].style.display=="block"){
+			       aBtn[i].className="";
+				   aPicBox[i].style.display="none";
+				   if(i==aBtn.length-1){
+				      aBtn[0].className="act";
+					  aPicBox[0].style.display="block";
+				   }
+				   else{
+				       aBtn[i+1].className="act"
+					   aPicBox[i+1].style.display="block";
+				   }
+				   break;
+			   }
+		  }
+	   },1000);
+	}
+
+</script>
+</head>
+<body>
+<div class="z_top_container">
+   <div class="z_top">
+     <div class="z_header">
+	       <div class="z_top_nav">
+		       <ul style="float:left;">
+			      <li class="home"><a class="i_link" href="www.bilibili.com">主站</a></li>
+				  <li class="hbili"><a class="i_link" title="画友" href="http://h.bilibili.com/">画友</a></li>
+				  <li><a class="i_link re"title="游戏中心"href="http://game.bilibili.com/">游戏中心</a></li>
+				  <li><a class="live"title="直播"href="http://live.bilibili.com"target="_blank">直播</a></li>
+				  <li class="no_border"><a class="i_link"title="手机端"href="http://app.bilibili.com"target="_blank">手机端</a></li>
+				  <li class="yoo"><a class="i-link"title="日本游"href="http://yoo.bilibili.com/index.html"target="_blank">日本游</a></li>
+			   </ul>
+		   </div>
+		   
+		   <div class="uns_box">
+		        <ul class="menu">
+				    <li><a href="#" id="example">登录</a></li>
+					<div id="LoginBox">
+        <div class="row1">
+            欢迎来到karakara动漫网 请登录<a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">×</a>
+        </div>
+        <div class="row">
+            用户名: <span class="inputBox" type="email">
+                <input type="text" id="txtName" placeholder="账号/邮箱" />
+            </span><a href="javascript:void(0)" title="提示" class="warning" id="warn">*</a>
+        </div>
+        <div class="row">
+            密&nbsp;&nbsp;&nbsp;&nbsp;码: <span class="inputBox">
+                <input type="text" id="txtPwd" placeholder="密码" />
+            </span><a href="javascript:void(0)" title="提示" class="warning" id="warn2">*</a>
+        </div>
+        <div class="row">
+            <a href="#" id="loginbtn">登录</a>
+        </div>
+    </div>
+
+	<script type="text/javascript">
+	$(function ($) {
+		//弹出登录
+		$("#example").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.6'
+			}, 1000);
+		}).on('click', function () {
+			$("body").append("<div id='mask'></div>");
+			$("#mask").addClass("mask").fadeIn("slow");
+			$("#LoginBox").fadeIn("slow");
+		});
+		//
+		//按钮的透明度
+		$("#loginbtn").hover(function () {
+			$(this).stop().animate({
+				opacity: '1'
+			}, 600);
+		}, function () {
+			$(this).stop().animate({
+				opacity: '0.8'
+			}, 1000);
+		});
+		//文本框不允许为空---按钮触发
+		$("#loginbtn").on('click', function () {
+			var txtName = $("#txtName").val();
+			var txtPwd = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$(".warning").css({ display: 'block' });
+				}
+				else {
+					$("#warn").css({ display: 'block' });
+					$("#warn2").css({ display: 'none' });
+				}
+			}
+			else {
+				if (txtPwd == "" || txtPwd == undefined || txtPwd == null) {
+					$("#warn").css({ display: 'none' });
+					$(".warn2").css({ display: 'block' });
+				}
+				else {
+					$(".warning").css({ display: 'none' });
+				}
+			}
+		});
+		//文本框不允许为空---单个文本触发
+		$("#txtName").on('blur', function () {
+			var txtName = $("#txtName").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn").css({ display: 'block' });
+			}
+			else {
+				$("#warn").css({ display: 'none' });
+			}
+		});
+		$("#txtName").on('focus', function () {
+			$("#warn").css({ display: 'none' });
+		});
+		//
+		$("#txtPwd").on('blur', function () {
+			var txtName = $("#txtPwd").val();
+			if (txtName == "" || txtName == undefined || txtName == null) {
+				$("#warn2").css({ display: 'block' });
+			}
+			else {
+				$("#warn2").css({ display: 'none' });
+			}
+		});
+		$("#txtPwd").on('focus', function () {
+			$("#warn2").css({ display: 'none' });
+		});
+		//关闭
+		$(".close_btn").hover(function () { $(this).css({ color: 'black' }) }, function () { $(this).css({ color: '#999' }) }).on('click', function () {
+			$("#LoginBox").fadeOut("fast");
+			$("#mask").css({ display: 'none' });
+		});
+	});
+	</script>	
+				    <li><select><option><a href="message.html">消息</a></option >
+					             <option><a>回复我的</a></option>
+								 <option><a>@我的</a></option>
+								 <option><a>收到的赞</a></option>
+								 <option><a>系统通知</a></option>
+								 <option><a>我的私信</a></option>
+					                                   </select></li>
+					<li>动态</li>
+					<li>收藏夹</li>
+					<li>历史</li>
+					<li>投稿</li>
+					
+				</ul>
+		   </div>
+     </div>
+  </div>
+</div>
+
+<div class="header"style="background:transparent no-repeat  scroll center top;">
+<a style="position:absolute;width:100%height:300px;top:0;left:0;"target="_blank"href="karakara动漫网.html"><img src="head.jpg"/></a>
+
+</div>
+
+<div class="num">
+<div class="nav">
+	<!--导航条-->
+	<ul class="nav-main">
+        <li>首页</li>
+		<li id="li-1">动画<span></span></li>
+		<li id="li-2">番剧<span></span></li>
+		<li id="li-3">舞蹈<span></span></li>
+		<li id="li-4">音乐<span></span></li>
+		<li>查看更多</li>
+	</ul>
+	<!--隐藏盒子-->
+	<div id="box-1" class="hidden-box hidden-loc-index">
+		<ul>
+			<li>MAD.AMV</li>
+			<li>MMD 3D</li>
+			<li>短片，手书</li>
+            <li>综合</li>
+		</ul>
+	</div>
+	<div id="box-2" class="hidden-box hidden-loc-us">
+		<ul>
+			<li>正在连载</li>
+			<li>已经完结</li>
+		</ul>
+	</div>
+	<div id="box-3" class="hidden-box hidden-loc-info">
+		<ul>
+			<li>宅舞</li>
+			<li>三次元舞蹈</li>
+			<li>舞蹈教程</li>
+			<li>hip pop</li>
+			<li>拉丁</li>
+            <li>跑酷</li>
+			<li>街舞</li>
+		</ul>
+	</div>
+    <div id="box-4" class="hidden-box hidden-loc-info box04">
+		<ul>
+			<li>翻唱</li>
+			<li>演奏</li>
+			<li>同人音乐</li>
+			<li>OP,ED,OST</li>
+			<li>音乐选集</li>
+            <li>VOCALOAD</li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/main.js"></script>
+	<div class="search" style="z-index:9999;float:left;">
+		<input class="search-keyword"name="searchform"></input>
+		<input name="orderby" value="" type="hidden">
+		<button type="submit" name="formsubmit" class="search-submit" style="width:40px;height:40px;background: transparent url('icons.png') repeat scroll -653px -720px;"></button>
+	</div>
+</div>
+
+<div class="1">
+<div class="box" id="box">
+ <div class="box1">
+     <div class="picbox" style="display:block;">
+         <img src="manage.jpg" />
+            <div class="shadow"></div>
+            <p class="title">标题1xxxxxxx</p>
+        </div>
+        <div class="picbox">
+         <img src="player.jpg" />
+            <div class="shadow"></div>
+            <p class="title">标题2xxxxxxx</p>
+        </div>
+        <div class="picbox">
+         <img src="py.jpg" />
+            <div class="shadow"></div>
+            <p class="title">标题3xxxxxxx</p>
+        </div>
+        <div class="picbox">
+         <img src="TT.jpg" />
+            <div class="shadow"></div>
+            <p class="title">标题4xxxxxxx</p>
+        </div>
+        <div class="picbox">
+         <img src="xf.jpg" />
+            <div class="shadow"></div>
+            <p class="title">标题5xxxxxxx</p>
+        </div>
+        <div class="picbtn" id="btn">
+         <a href="javascript:void(0)" class="act"></a>
+            <a href="javascript:void(0)"></a>
+            <a href="javascript:void(0)"></a>
+            <a href="javascript:void(0)"></a>
+            <a href="javascript:void(0)"></a>
+			
+		
+        </div>
+    </div>
+  </div>
+<div class="head tb">
+      <table class="tb head" border="0">
+          <tr>
+	         <td><a href="video.html"><img src="top li/li1.png"></a></td>
+		     <td><a href="video.html"><img src="top li/li2.png"></a></td>
+		     <td><a href="video.html"><img src="top li/li3.png"></a></td>
+		     <td><a href="video.html"><img src="top li/li4.png"></a></td>
+	      </tr>
+
+          <tr>
+	         <td><a href="video.html"><img src="top li/li5.png"></a></td>
+		     <td><a href="video.html"><img src="top li/li6.png"></a></td>
+		     <td><a href="video.html"><img src="top li/li7.png"></a></td>
+		     <td><a href="video.html"><img src="top li/li8.png"></a></td>
+	      </tr>	 
+         </table>
+
+</div>
+</div>
+
+<div class="cotainer-row">
+
+
+  <div class="b-1">
+       <div class="b-head">
+			<span class=="b-head-i">
+			<button type="submit" name="formsubmit" class="search-submit" style="width:40px;height:40px;background: transparent url('icons.png') repeat scroll -84px -82px;-webkit-border-radius:5px;//webkit内核
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;"></button>
+			</span>
+			<span class="b-head-t"><h2>推广</h2></span>
+	   </div>
+	   
+	   <div class="b-body">
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="tuiguang li/li1.png"/></a></li>
+				<li><a href="video.html"><img src="tuiguang li/2.png"/></a></li>
+				<li><a href="video.html"><img src="tuiguang li/3.png"/></a></li>
+				<li><a href="video.html"><img src="tuiguang li/4.png"/></a></li>
+				<li><a href="video.html"><img src="tuiguang li/5.png"/></a></li>
+				<li style="margin-left:50px;"><a href="video.html"><img src="tuiguang li/6.png"/></a></li>
+			</ul>
+	   </div>
+   </div>
+  </div>
+
+  <div class="b-live">
+     <div  class="b-section-body">
+	     <div class="b-head">
+			<span class=="b-head-i">
+			<button type="submit" name="formsubmit" class="search-submit" style="width:40px;height:40px;background: transparent url('icons.png') repeat scroll -84px -143px;-webkit-border-radius:5px;//webkit内核
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;"></button>
+			</span>
+			<span class="b-head-t"><h2>直播</h2></span>
+	   </div>
+	     <div class="b-body">
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="live li/1.png"/></a></li>
+				<li><a href="video.html"><img src="live li/2.png"/></a></li>
+				<li><a href="video.html"><img src="live li/3.png"/></a></li>
+				<li><a href="video.html"><img src="live li/4.png"/></a></li>
+				<li><a href="video.html"><img src="live li/5.png"/></a></li>
+			</ul>
+
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="live li/6.png"/></a></li>
+				<li><a href="video.html"><img src="live li/7.png"/></a></li>
+				<li><a href="video.html"><img src="live li/8.png"/></a></li>
+				<li><a href="video.html"><img src="live li/9.png"/></a></li>
+				<li><a href="video.html"><img src="live li/10.png"/></a></li>
+			</ul>			
+	   </div>
+	 </div>
+     <div class="live-side">
+     <img src="live li/11.png"/>
+  </div>
+  
+  
+  </div>
+
+  <div class="b-donghua">
+     <div  class="b-section-body">
+	     <div class="b-head">
+			<span class=="b-head-i">
+			<button type="submit" name="formsubmit" class="search-submit" style="width:40px;height:40px;background: transparent url('icons.png') repeat scroll -84px -209px;-webkit-border-radius:5px;//webkit内核
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;"></button>
+			</span>
+			<span class="b-head-t"><h2>动画</h2></span>
+	   </div>
+	     <div class="b-body">
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="donghua li/1.png"/></a></li>
+				<li><a href="video.html"><img src="donghua li/2.png"/></a></li>
+				<li><a href="video.html"><img src="donghua li/3.png"/></a></li>
+				<li><a href="video.html"><img src="donghua li/4.png"/></a></li>
+				<li><a href="video.html"><img src="donghua li/5.png"/></a></li>
+			</ul>
+
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="donghua li/6.png"/></a></li>
+				<li><a href="video.html"><img src="donghua li/7.png"/></a></li>
+				<li><a href="video.html"><img src="donghua li/8.png"/></a></li>
+				<li><a href="video.html"><img src="donghua li/9.png"/></a></li>
+				<li><a href="video.html"><img src="donghua li/10.png"/></a></li>
+			</ul>			
+	   </div>
+	 </div>
+     <div class="donghua-side">
+     <img src="donghua li/11.png"/>
+   </div>
+ </div>  
+
+   <div class="b-fanju">
+     <div  class="b-section-body">
+	     <div class="b-head">
+			<span class=="b-head-i">
+			<button type="submit" name="formsubmit" class="search-submit" style="width:40px;height:40px;background: transparent url('icons.png') repeat scroll -84px -272px;-webkit-border-radius:5px;//webkit内核
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;"></button>
+			</span>
+			<span class="b-head-t"><h2>番剧</h2></span>
+	   </div>
+	     <div class="b-body">
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="fanju li/1.png"/></a></li>
+				<li><a href="video.html"><img src="fanju li/2.png"/></a></li>
+				<li><a href="video.html"><img src="fanju li/3.png"/></a></li>
+				<li><a href="video.html"><img src="fanju li/4.png"/></a></li>
+				<li><a href="video.html"><img src="fanju li/5.png"/></a></li>
+			</ul>
+
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="fanju li/6.png"/></a></li>
+				<li><a href="video.html"><img src="fanju li/7.png"/></a></li>
+				<li><a href="video.html"><img src="fanju li/8.png"/></a></li>
+				<li><a href="video.html"><img src="fanju li/9.png"/></a></li>
+				<li><a href="video.html"><img src="fanju li/10.png"/></a></li>
+			</ul>			
+	   </div>
+	 </div>
+     <div class="fanju-side">
+     <img src="fanju li/11.png"/>
+   </div>
+ </div>
+ 
+    <div class="b-music">
+     <div  class="b-section-body">
+	     <div class="b-head">
+			<span class=="b-head-i">
+			<button type="submit" name="formsubmit" class="search-submit" style="width:40px;height:40px;background: transparent url('icons.png') repeat scroll -84px -337px;-webkit-border-radius:5px;//webkit内核
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;"></button>
+			</span>
+			<span class="b-head-t"><h2>音乐</h2></span>
+	   </div>
+	     <div class="b-body">
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="music li/1.png"/></a></li>
+				<li><a href="video.html"><img src="music li/2.png"/></a></li>
+				<li><a href="video.html"><img src="music li/3.png"/></a></li>
+				<li><a href="video.html"><img src="music li/4.png"/></a></li>
+				<li><a href="video.html"><img src="music li/5.png"/></a></li>
+			</ul>
+
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="music li/6.png"/></a></li>
+				<li><a href="video.html"><img src="music li/7.png"/></a></li>
+				<li><a href="video.html"><img src="music li/8.png"/></a></li>
+				<li><a href="video.html"><img src="music li/9.png"/></a></li>
+				<li><a href="video.html"><img src="music li/10.png"/></a></li>
+			</ul>			
+	   </div>
+	 </div>
+     <div class="music-side">
+     <img src="music li/11.png"/>
+   </div>
+ </div>
+ 
+     <div class="b-dance">
+     <div  class="b-section-body">
+	     <div class="b-head">
+			<span class=="b-head-i">
+			<button type="submit" name="formsubmit" class="search-submit" style="width:40px;height:40px;background: transparent url('icons.png') repeat scroll -84px -402px;-webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -ms-border-radius:5px;
+  -o-border-radius:5px;
+  border-radius:5px;"></button>
+			</span>
+			<span class="b-head-t"><h2>舞蹈</h2></span>
+	   </div>
+	     <div class="b-body">
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="dance li/1.png"/></a></li>
+				<li><a href="video.html"><img src="dance li/2.png"/></a></li>
+				<li><a href="video.html"><img src="dance li/3.png"/></a></li>
+				<li><a href="video.html"><img src="dance li/4.png"/></a></li>
+				<li><a href="video.html"><img src="dance li/5.png"/></a></li>
+			</ul>
+
+	        <ul class="rm-list"> 
+			    <li><a href="video.html"><img src="dance li/6.png"/></a></li>
+				<li><a href="video.html"><img src="dance li/7.png"/></a></li>
+				<li><a href="video.html"><img src="dance li/8.png"/></a></li>
+				<li><a href="video.html"><img src="dance li/9.png"/></a></li>
+				<li><a href="video.html"><img src="dance li/10.png"/></a></li>
+			</ul>			
+	   </div>
+	 </div>
+     <div class="dance-side">
+     <img src="dance li/11.png"/>
+   </div>
+ </div>
+
+
+</body>
+
+
+
+
+</html>
